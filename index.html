@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realm of Thrones Quiz</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Realm of Thrones</h1>
+    <p>Test your knowledge & discover your destiny</p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="button-group">
+    <button class="button" id="btn-quiz">Test Your Knowledge</button>
+    <button class="button" id="btn-character">Which Character Are You?</button>
+    <button class="button" id="btn-house">Which House Do You Belong To?</button>
+  </div>
+
+  <!-- LEVEL SELECTION FOR QUIZ -->
+  <div id="level-select" class="quiz-section" style="display:none;">
+    <h2>Select Difficulty Level</h2>
+    <button class="option-btn level-btn" data-level="easy">Easy</button>
+    <button class="option-btn level-btn" data-level="medium">Medium</button>
+    <button class="option-btn level-btn" data-level="hard">Hard</button>
+  </div>
+
+  <!-- Quiz Section -->
+  <div id="quiz-section" class="quiz-section" style="display:none;">
+    <h2>Quiz</h2>
+    <p id="question">Question placeholder</p>
+
+    <div id="options"></div>
+
+    <button id="next-btn">Next</button>
+    <p id="score">Score: 0</p>
+    <p id="quiz-result"></p>
+  </div>
+
+  <!-- Character / House Quiz -->
+  <div id="character-section" class="character-section" style="display:none;">
+    <h2 id="gc-title">Character Quiz</h2>
+    <p id="gc-question">Question placeholder</p>
+
+    <div id="gc-options"></div>
+
+    <button id="gc-next">Next</button>
+    <p id="gc-result"></p>
+  </div>
+</div>
+
+<footer> Fan Project</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+
+/* === Global Styles (Mobile-First) === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    color: #f0e6d2;
+    background: url('Gemini_Generated_Image_56f1e756f1e756f1.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container */
+.container {
+    width: 92%;
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 28px 10px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 240px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px black;
+}
+.hero h1 {
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.hero p {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+.button {
+    width: 100%;
+    padding: 14px;
+    background: #1a1a1a;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #ffd700;
+    border-radius: 8px;
+}
+.button:hover {
+    background: #ffd700;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #ff8c00, 0 0 40px #ffd700;
+}
+
+/* Selected Option (Green Highlight) */
+.option-btn.selected {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
+    border-color: #1e7e34 !important;
+    box-shadow: 0 0 15px #28a745, 0 0 30px #1e7e34 !important;
+    transform: scale(1.05);
+}
+
+/* Options */
+.option-btn {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    background: #1a1a1a;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #ffd700;
+    margin: 12px 0;
+}
+.option-btn:hover {
+    background: #ffd700;
+    color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+/* Quiz / Character Sections */
+.quiz-section, 
+.character-section {
+    background: rgba(26,26,26,0.88);
+    padding: 22px;
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+}
+.quiz-section h2,
+.character-section h2 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin-bottom: 15px;
+    color: #ffd700;
+    text-shadow: 1px 1px 5px black;
+}
+
+/* Next Buttons */
+#next-btn, #gc-next {
+    width: 100%;
+    padding: 14px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: bold;
+    color: #1a1a1a;
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 20px;
+    animation: glow 2s infinite alternate;
+}
+#next-btn:hover, #gc-next:hover {
+    transform: scale(1.05);
+}
+
+/* Score / Results */
+#score, #gc-result, #quiz-result {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 10px #ffd700; }
+    50%      { box-shadow: 0 0 20px #ff8c00; }
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* Tablets (landscape & portrait) */
+@media screen and (min-width: 600px) {
+    .button-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button {
+        flex: 1 1 260px;
+        max-width: 300px;
+    }
+    .option-btn {
+        width: 85%;
+        margin: 10px auto;
+    }
+}
+
+/* Laptops & Desktops */
+@media screen and (min-width: 900px) {
+    .hero {
+        min-height: 300px;
+    }
+    #next-btn, #gc-next {
+        width: auto;
+        padding: 14px 30px;
+    }
+}
+    
+/* -------- FOOTER -------- */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 18px;
+    background: #111;
+    color: #f0e6d2;
+    border-top: 2px solid #ffd700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer * {
+    margin: 0;
+}
+
